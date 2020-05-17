@@ -9,12 +9,12 @@
 
 
 body {
-    background-image: url("../img/antibes_france.jpeg");
-    background-size: auto 130vh;
+    background-image: url("../img/fundo.jpeg");
+    background-size: auto 150vh;
     height: 100vh;
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
-    color: floralwhite;
+    color:dimgrey;
   }
 /* se a tela tiver pelo menos 400px vai carregar estes estilos */
   @media (min-width: 400px) {
@@ -37,7 +37,7 @@ body {
   }
 
   header{
-    height: 70vh;
+    height: 60vh;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -63,6 +63,12 @@ body {
   .menu a{
     display: block;
     padding: 10px 20px;
+    transition: 1s;
+  }
+
+  .menu a:hover{
+    background-color:floralwhite;
+    color: dimgrey;
   }
   
   a{
@@ -74,10 +80,11 @@ body {
     text-decoration:underline;
   }
   
+  
   .site-subtitle,
   .site-title {
     text-align:center;
-    color: floralwhite;
+    color:floralwhite;
   }
   
   .site-title{
@@ -91,13 +98,15 @@ body {
     font-family:'Baloo 2', cursive;
     
   }
+  .contato,
   .especialidades {
-    padding:2em;
-    height: 57vh;
+    padding:1em;
+    min-height: 50vh;
   }
+  .contato h2,
   .especialidades h2{
     font-family: 'Baloo 2', cursive;
-    color:;
+    color:floralwhite;
     margin-bottom: 1.5em;
     }
 
@@ -123,8 +132,31 @@ body {
     }
 
     .img-especialidades {
-      height: 220px;
-      width: 280px;
+      height: 180px;
+      width: 200px;
       object-fit: cover;
       border-radius: 20px;
+      transition: transform 500ms;
   }
+
+    .img-especialidades:hover {
+      transform: scale(1.1) rotate(15deg);
+
+    }
+
+  .contato .icons {
+    text-align: center;
+  }
+
+  .contato a{
+    color: dimgrey;
+    font-size: 2.5em;
+    transition: text-shadow 1s;
+
+  }
+
+  .contato a:hover {
+    text-decoration: none;
+    text-shadow: 0px 5px 10px floralwhite;
+
+   }
