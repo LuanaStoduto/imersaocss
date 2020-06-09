@@ -8,45 +8,47 @@
 }
 
 
-body {
+  body {
     background-image: url("../img/fundo.jpeg");
     background-size: auto 150vh;
     height: 100vh;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'DM Mono', monospace;
     font-size: 12px;
     color:dimgrey;
   }
-/* se a tela tiver pelo menos 400px vai carregar estes estilos */
-  @media (min-width: 400px) {
-    body{
-      font-size:14px;
-    }
-  }
-   
-  /* breakpoint */
-  @media (min-width: 600px) {
-    body{
-      font-size:18px;
-    }
-  }
-   /* breakpoint */
-   @media (min-width: 1200px) {
-    body{
-      font-size:22px;
-    }
-  }
 
-  header{
-    height: 60vh;
-    display:flex;
+/* se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+  body{
+    font-size: 14px;
+  }
+}
+ 
+/* breakpoint */
+@media (min-width: 600px) {
+  body{
+  font-size: 18px;
+  }
+}
+ /* breakpoint */
+ @media (min-width: 1200px) {
+  body{
+    font-size: 24px;
+  }
+}
+
+  header {
+    height: 90vh;
+    display: flex;
     justify-content: center;
     align-items: center;
+
   }
   
   .menu {
-    background-color:lavender;
-    position:fixed;
-    width:100vw;
+    background-color: lavender;
+    position: fixed;
+    width: 100vw;
     top: 0;
   }
   
@@ -57,10 +59,10 @@ body {
   }
   
   .menu li {
-    list-style:none;
+    list-style: none;
   }
 
-  .menu a{
+  .menu a {
     display: block;
     padding: 10px 20px;
     transition: 1s;
@@ -73,41 +75,78 @@ body {
   
   a{
     color: dimgrey;
-    text-decoration:none;
+    text-decoration: none;
   }
   
   a:hover{
-    text-decoration:underline;
+    text-decoration: underline;
   }
-  
   
   .site-subtitle,
   .site-title {
-    text-align:center;
     color:floralwhite;
+    text-align: center;
   }
   
-  .site-title{
-    font-size:4em;
-    font-family: 'Kalam', cursive;
-    /* paulo */
-    text-shadow: 2px 2px 4px;
+  .site-title {
+    font-size: 4em;
+    font-family: 'Gloria Hallelujah', cursive;
+   /* paulo */
+    text-shadow: 2px 4px 2px;
   }
+
   .site-subtitle {
-    font-style:italic;
-    font-family:'Baloo 2', cursive;
-    
+    font-style: italic;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 2em;
+
   }
+
+  .luana,
   .contato,
   .especialidades {
-    padding:1em;
-    min-height: 50vh;
+    padding: 2em;
+    min-height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  @media (min-width: 1200px) {
+  .luana,
+  .contato,
+  .especialidades {
+    max-width: 1200px;
+    
+  }
+
+  }
+
+  .luana h2,
   .contato h2,
-  .especialidades h2{
-    font-family: 'Baloo 2', cursive;
-    color:floralwhite;
-    margin-bottom: 1.5em;
+  .especialidades h2 {
+    font-family: 'DM Mono', monospace;
+    color:dimgrey;
+    margin-bottom: 1.5;
+
+  }
+
+    .luana p {
+      color:dimgrey;
+      margin-bottom: 1.2em;
+      text-indent: 1.4em;
+      text-align: justify;
+
+    }
+
+    .luana .avatar {
+      float: right;
+      margin-left: 1em;
+    }
+    
+    .luana .avatar img {
+      clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+      height: 300px;
+      width: 300px;
     }
 
     .especialidades .grid{
@@ -132,30 +171,62 @@ body {
     }
 
     .img-especialidades {
-      height: 180px;
-      width: 200px;
+      height: 220px;
+      width: 280px;
       object-fit: cover;
-      border-radius: 20px;
+      object-position: left bottom;
       transition: transform 500ms;
   }
 
     .img-especialidades:hover {
-      transform: scale(1.1) rotate(15deg);
+      transform: scale(1.1) rotate(0);
 
     }
+    .flip-card {
+      perspective: 600px;
 
-  .contato .icons {
+        }
+
+    .card {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 2s;
+    }
+
+    .flip-card:hover .card {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      left:0;
+      top:0;
+      backface-visibility: hidden;
+    }
+    
+    .card-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color:lavender;
+      height: 220px;
+      width: 280px;
+      transform: rotateY(180deg);
+    }
+
+    .contato .icons {
     text-align: center;
   }
 
-  .contato a{
+    .contato a{
     color: dimgrey;
     font-size: 2.5em;
     transition: text-shadow 1s;
 
   }
 
-  .contato a:hover {
+    .contato a:hover {
     text-decoration: none;
     text-shadow: 0px 5px 10px floralwhite;
 
